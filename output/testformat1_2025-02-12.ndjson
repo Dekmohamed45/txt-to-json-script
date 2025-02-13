@@ -9,3 +9,4 @@
 {"name":"Allergy","value":false,"count":-5}
 {"name":"Flu","value":true,"count":10}
 {"name":"Virus","value":true,"count":10000}
+{"name":"Samples","value":false,"count":70}
