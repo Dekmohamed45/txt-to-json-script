@@ -25,12 +25,12 @@ function processData() {
       // we need three parts : name, value, and count
       if (parts.length === 3) {
         const name = parts[0];
-        let value = parts[1] === '1';  // Convert 1 to true, 0 for false
+        let value = parts[1] === '1';  // Convert 1 to true, 0 for false since I kept having issues with converstion of certain boolean value
 
         const count = parseInt(parts[2], 10);
         const countValue = isNaN(count) ? null : count; 
 
-        // Create an object and push it to the results array
+        // Creates an object and pushes it to the result
         const obj = {
           name: name,
           value: value,  
@@ -39,16 +39,16 @@ function processData() {
 
         results.push(obj);  // Add the object to the new results array being created for the output file
       } else {
-        console.log('Invalid format:', line);  // debugging purposes
+        console.log('Invalid format:', line);  // Debugging purposes
       }
     }
 
     // take that array of results and save it into a file
     fs.writeFile(outputFile, results.map(item => JSON.stringify(item)).join('\n'), (err) => {
       if (err) {
-        console.log('Error writing the output file:', err);
+        console.log('Error writing the output file:', err); // Error handaling for debugging purposes
       } else {
-        console.log('Data processed and saved to', outputFile); // giving you a completed message
+        console.log('Data processed and saved to', outputFile); // Provides you a completed message
       }
     });
   });
