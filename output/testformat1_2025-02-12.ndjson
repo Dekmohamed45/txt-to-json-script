@@ -1,0 +1,11 @@
+{"name":"Diabetes","value":false,"count":1}
+{"name":"Asthma","value":false,"count":-14}
+{"name":"Stroke","value":false,"count":122}
+{"name":"Cancer","value":true,"count":0}
+{"name":"Heart","value":false,"count":25}
+{"name":"Lung","value":true,"count":30}
+{"name":"Kidney","value":false,"count":7}
+{"name":"Fever","value":true,"count":45}
+{"name":"Allergy","value":false,"count":-5}
+{"name":"Flu","value":true,"count":10}
+{"name":"Virus","value":true,"count":10000}

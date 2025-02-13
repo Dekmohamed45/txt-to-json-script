@@ -1,0 +1,14 @@
+Diabetes 0 1
+Asthma 0 -14
+Stroke 0 122
+Cancer 1 0
+Heart 0 25
+Lung 1 30
+Kidney 0 7
+Fever 1 45
+Allergy 0 -5
+Flu 1 10
+Virus 1 10000
+
+
+
