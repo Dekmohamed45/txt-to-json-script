@@ -9,6 +9,7 @@ Fever 1 45
 Allergy 0 -5
 Flu 1 10
 Virus 1 10000
+Samples 0 70
 
 
 
