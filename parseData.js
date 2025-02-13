@@ -20,7 +20,7 @@ function processData() {
       line = line.trim();  
       if (!line) continue; 
 
-      const parts = line.split(/\s+/);  // Split by spaces (this assumes only one space or multiple spaces)
+      const parts = line.split(/\s+/);
 
       // we need three parts : name, value, and count
       if (parts.length === 3) {
