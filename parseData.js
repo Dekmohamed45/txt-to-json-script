@@ -3,7 +3,7 @@ const path = require('path');
 
 function processData() {
   const filePath = path.join(__dirname, 'data', 'testformat1_2025-02-12.txt');  // reading info from this txt file
-  const outputFile = path.join(__dirname, 'output', 'testformat1_2025-02-12.ndjson'); // saving to this file
+  const outputFile = path.join(__dirname, 'output', 'testformat1_2025-02-12.ndjson'); // saving to this place/folder
 
 
   fs.readFile(filePath, 'utf8', (err, data) => {
@@ -22,20 +22,16 @@ function processData() {
 
       const parts = line.split(/\s+/);
 
-      // we need three parts : name, value, and count
+      // we need three parts : name, valid, and count
       if (parts.length === 3) {
-        const name = parts[0];
-        let value = parts[1] === '1';  // Convert 1 to true, 0 for false since I kept having issues with converstion of certain boolean value
+        const name = parts[0]; //name part for Column names
+        let valid = parts[1] === '1';  // valid: Convert 1 to true, 0 for false since I kept having issues with converstion of certain boolean valid
 
         const count = parseInt(parts[2], 10);
-        const countValue = isNaN(count) ? null : count; 
+        const countValid = isNaN(count) ? null : count; 
 
         // Creates an object and pushes it to the result
-        const obj = {
-          name: name,
-          value: value,  
-          count: countValue 
-        };
+        const obj = { name, valid, count: countValid };
 
         results.push(obj);  // Add the object to the new results array being created for the output file
       } else {
